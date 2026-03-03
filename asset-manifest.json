@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/saints/static/css/main.dc4d6ff2.css",
-    "main.js": "/saints/static/js/main.a5bf1cb4.js",
-    "static/media/logo.svg": "/saints/static/media/logo.7ec453e3bdac11b14da36f82f9ce24fc.svg",
+    "main.css": "/saints/static/css/main.bab60058.css",
+    "main.js": "/saints/static/js/main.99afd589.js",
+    "static/media/saint-placeholder.jpg": "/saints/static/media/saint-placeholder.8e70471863ed121c9d8c.jpg",
     "index.html": "/saints/index.html",
-    "main.dc4d6ff2.css.map": "/saints/static/css/main.dc4d6ff2.css.map",
-    "main.a5bf1cb4.js.map": "/saints/static/js/main.a5bf1cb4.js.map"
+    "main.bab60058.css.map": "/saints/static/css/main.bab60058.css.map",
+    "main.99afd589.js.map": "/saints/static/js/main.99afd589.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc4d6ff2.css",
-    "static/js/main.a5bf1cb4.js"
+    "static/css/main.bab60058.css",
+    "static/js/main.99afd589.js"
   ]
 }
