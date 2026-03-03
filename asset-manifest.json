@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/saints/static/css/main.dc4d6ff2.css",
+    "main.js": "/saints/static/js/main.a5bf1cb4.js",
+    "static/media/logo.svg": "/saints/static/media/logo.7ec453e3bdac11b14da36f82f9ce24fc.svg",
+    "index.html": "/saints/index.html",
+    "main.dc4d6ff2.css.map": "/saints/static/css/main.dc4d6ff2.css.map",
+    "main.a5bf1cb4.js.map": "/saints/static/js/main.a5bf1cb4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc4d6ff2.css",
+    "static/js/main.a5bf1cb4.js"
+  ]
+}
