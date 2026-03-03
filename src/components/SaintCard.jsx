@@ -1,3 +1,7 @@
+import React from 'react';
+import saintPlaceholder from '../images/saint-placeholder.jpg';   // ← Add this line
+// Adjust the path if your file structure is different (e.g. '../../images/...' if deeper nesting)
+
 const ERA_COLORS = {
   'Apostolic':     '#8b1a1a',
   'Early Church':  '#8b5a1a',
@@ -31,19 +35,37 @@ export default function SaintCard({ saint, theme, onClick }) {
         e.currentTarget.style.borderColor = theme.cardBorder;
       }}
     >
-      <div style={{ overflow: 'hidden', height: 200, background: theme.surfaceAlt, position: 'relative' }}>
-        {saint.image ? (
-          <img src={saint.image} alt={saint.name} className="saint-card-img"
-            onError={e => { e.target.style.display = 'none'; }} />
-        ) : (
-          <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 64, color: theme.border }}>✝</div>
-        )}
+      <div style={{ 
+        overflow: 'hidden', 
+        height: 200, 
+        background: theme.surfaceAlt, 
+        position: 'relative' 
+      }}>
+        <img
+          src={saint.image || saintPlaceholder}           // ← Changed to use the imported variable
+          alt={saint.name}
+          className="saint-card-img"
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          onError={e => {
+            e.currentTarget.onerror = null; // Prevent infinite loop if placeholder also fails
+            e.currentTarget.src = saintPlaceholder; // Fallback to placeholder on error
+            }}
+        />
+
         <div style={{
-          position: 'absolute', top: 8, left: 8,
+          position: 'absolute', 
+          top: 8, 
+          left: 8,
           background: ERA_COLORS[saint.era] || '#555',
-          color: '#fff', fontSize: 10, padding: '2px 8px',
-          borderRadius: 12, letterSpacing: 1, fontWeight: 500,
-        }}>{saint.era}</div>
+          color: '#fff', 
+          fontSize: 10, 
+          padding: '2px 8px',
+          borderRadius: 12, 
+          letterSpacing: 1, 
+          fontWeight: 500,
+        }}>
+          {saint.era}
+        </div>
       </div>
 
       <div style={{ padding: '14px 16px' }}>

@@ -126,17 +126,28 @@ function mapCategories(rawLabels) {
   return out.size ? [...out] : ['Confessor'];
 }
 
+function wikimediaThumbnail(url, size = 600) {
+  if (!url || !url.includes('upload.wikimedia.org')) return url;
+
+  const parts = url.split('/');
+  const fileName = parts.pop();
+  const hash1 = parts[parts.length - 2];
+  const hash2 = parts[parts.length - 1];
+
+  return `https://upload.wikimedia.org/wikipedia/commons/thumb/${hash1}/${hash2}/${fileName}/${size}px-${fileName}`;
+}
+
 function transform(row, id) {
   const name        = row.itemLabel?.value      || 'Unknown Saint';
   const description = row.itemDescription?.value || '';
   const birthYear   = parseYear(row.birthDate?.value);
   const deathYear   = parseYear(row.deathDate?.value);
-  const image       = row.image?.value          || null;
+  const rawImage = row.image?.value || null;
+  const image = wikimediaThumbnail(rawImage, 600);
   const country     = row.countryLabel?.value   || null;
   const feastDay    = row.feastDayLabel?.value  || null;
   const wikidataId  = row.item?.value?.split('/').pop() || null;
   const wikipedia   = row.article?.value        || null;
-
   const patronOf   = splitGroup(row.patronOfs?.value);
   const rawCats    = splitGroup(row.categoryLabels?.value);
   const categories = mapCategories(rawCats);

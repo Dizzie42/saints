@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { patronCategories } from '../data/patronCategories';
+import saintPlaceholder from '../images/saint-placeholder.jpg';  // ← ADD THIS (same path as in SaintCard)
 
 export default function FindYourPatron({ theme, saints, onSelect }) {
   const [search, setSearch] = useState('');
@@ -24,7 +25,7 @@ export default function FindYourPatron({ theme, saints, onSelect }) {
   const featured = useMemo(() => {
     // Pick saints with rich patron data for the home screen
     return saints
-      .filter(s => s.patronOf.length >= 3 && s.image)
+      .filter(s => s.patronOf.length >= 3 && s.image)  // ← optional: keep this filter or remove if you want placeholders in featured too
       .sort(() => Math.random() - 0.5)
       .slice(0, 6);
   }, [saints]);
@@ -138,11 +139,15 @@ function PatronResult({ saint, theme, search, onSelect }) {
       onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = theme.accent; }}
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = theme.cardBorder; }}
     >
-      {saint.image && (
-        <img src={saint.image} alt={saint.name}
-          style={{ width: 80, height: 80, objectFit: 'cover', flexShrink: 0 }}
-          onError={e => e.target.style.display = 'none'} />
-      )}
+      <img
+        src={saint.image || saintPlaceholder}  // ← changed: always render, fallback if no image
+        alt={saint.name}
+        style={{ width: 80, height: 80, objectFit: 'cover', flexShrink: 0 }}
+        onError={(e) => {
+          e.currentTarget.onerror = null;           // prevent loop
+          e.currentTarget.src = saintPlaceholder;   // swap to placeholder on failure
+        }}
+      />
       <div style={{ padding: '12px 14px', flex: 1 }}>
         <div style={{ fontSize: 14, fontFamily: theme.headingFamily, color: theme.accent, marginBottom: 4 }}>{saint.name}</div>
         <div style={{ fontSize: 12, color: theme.textMuted, marginBottom: 6 }}>{saint.era} · {saint.region}</div>

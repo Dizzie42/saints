@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import saintPlaceholder from '../images/saint-placeholder.jpg';  // adjust path if needed (e.g. '../../images/...')
 
 export default function SaintModal({ saint, theme, onClose, onPatronClick }) {
   useEffect(() => {
@@ -20,32 +21,38 @@ export default function SaintModal({ saint, theme, onClose, onPatronClick }) {
   return (
     <div className="modal-overlay" onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
       <div className="modal-content" style={{ background: theme.modalBg, border: `1px solid ${theme.border}` }}>
-        {/* Hero */}
-        <div style={{ position: 'relative' }}>
-          {saint.image && (
-            <img src={saint.image} alt={saint.name}
-              style={{ width: '100%', height: 280, objectFit: 'cover', display: 'block' }}
-              onError={e => e.target.style.display = 'none'} />
-          )}
-          <div style={{
-            position: 'absolute', inset: 0,
-            background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%)',
-            display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
-            padding: '20px 24px',
-          }}>
-            <h2 style={{ fontFamily: theme.headingFamily, fontSize: 26, color: '#ffffff', margin: 0, textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
-              {saint.name}
-            </h2>
-            <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.8)', marginTop: 4 }}>
-              {[saint.era, saint.region, saint.feastDay && `Feast: ${saint.feastDay}`].filter(Boolean).join(' · ')}
-            </div>
+      {/* Hero */}
+      <div style={{ position: 'relative' }}>
+        <img
+          src={saint.image || saintPlaceholder}
+          alt={saint.name}
+          style={{ width: '100%', height: 280, objectFit: 'cover', display: 'block' }}
+          onError={(e) => {
+            e.currentTarget.onerror = null;  // prevent loop if placeholder fails (rare)
+            e.currentTarget.src = saintPlaceholder;
+          }}
+        />
+
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%)',
+          display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+          padding: '20px 24px',
+        }}>
+          <h2 style={{ fontFamily: theme.headingFamily, fontSize: 26, color: '#ffffff', margin: 0, textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
+            {saint.name}
+          </h2>
+          <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.8)', marginTop: 4 }}>
+            {[saint.era, saint.region, saint.feastDay && `Feast: ${saint.feastDay}`].filter(Boolean).join(' · ')}
           </div>
-          <button onClick={onClose} style={{
-            position: 'absolute', top: 12, right: 12,
-            background: 'rgba(0,0,0,0.5)', color: '#fff',
-            width: 32, height: 32, borderRadius: '50%', fontSize: 18, lineHeight: '32px', textAlign: 'center',
-          }}>×</button>
         </div>
+
+        <button onClick={onClose} style={{
+          position: 'absolute', top: 12, right: 12,
+          background: 'rgba(0,0,0,0.5)', color: '#fff',
+          width: 32, height: 32, borderRadius: '50%', fontSize: 18, lineHeight: '32px', textAlign: 'center',
+        }}>×</button>
+      </div>
 
         <div style={{ padding: '24px' }}>
           {/* Summary */}
