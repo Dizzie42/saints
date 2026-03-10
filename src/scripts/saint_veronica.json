@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "name": "Mother Veronica of the Passion",
+    "birthYear": 1823,
+    "deathYear": 1906,
+    "feastDay": null,
+    "gender": "female",
+    "region": "Europe",
+    "era": "Contemporary",
+    "categories": [
+      "Nun"
+    ],
+    "patronOf": [],
+    "memberOf": [],
+    "notableWorks": [],
+    "positions": [],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Veronica%20of%20the%20Passion%20%281823-1906%29.png",
+    "summary": "English convert, Carmelite nun and foundress (1823–1906).",
+    "biography": "English convert, Carmelite nun and foundress (1823–1906)",
+    "pathToSainthood": null,
+    "miracles": [],
+    "martyrdom": null,
+    "symbols": [],
+    "quotes": [],
+    "_meta": {
+      "wikidataId": "Q3490986",
+      "wikipedia": "https://en.wikipedia.org/wiki/Veronica_of_the_Passion",
+      "country": "United Kingdom of Great Britain and Ireland"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Saint Veronica",
+    "birthYear": 1,
+    "deathYear": 1,
+    "feastDay": null,
+    "gender": "female",
+    "region": "Unknown",
+    "era": "Apostolic",
+    "categories": [
+      "Confessor"
+    ],
+    "patronOf": [],
+    "memberOf": [],
+    "notableWorks": [],
+    "positions": [],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sacro%20Monte%20di%20Varallo%20Fig2.JPG",
+    "summary": "Christian saint.",
+    "biography": "Christian saint",
+    "pathToSainthood": null,
+    "miracles": [],
+    "martyrdom": null,
+    "symbols": [],
+    "quotes": [],
+    "_meta": {
+      "wikidataId": "Q196653",
+      "wikipedia": "https://en.wikipedia.org/wiki/Saint_Veronica",
+      "country": null
+    }
+  },
+  {
+    "id": 3,
+    "name": "Veronica Briguglio",
+    "birthYear": 1870,
+    "deathYear": 1950,
+    "feastDay": null,
+    "gender": "female",
+    "region": "Europe",
+    "era": "Contemporary",
+    "categories": [
+      "Confessor"
+    ],
+    "patronOf": [],
+    "memberOf": [],
+    "notableWorks": [],
+    "positions": [],
+    "image": null,
+    "summary": "Veronica Briguglio, venerated saint of the Catholic Church.",
+    "biography": null,
+    "pathToSainthood": null,
+    "miracles": [],
+    "martyrdom": null,
+    "symbols": [],
+    "quotes": [],
+    "_meta": {
+      "wikidataId": "Q19984604",
+      "wikipedia": null,
+      "country": "Italy"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Veronica Cooper",
+    "birthYear": 1913,
+    "deathYear": 2000,
+    "feastDay": null,
+    "gender": "female",
+    "region": "Americas",
+    "era": "Contemporary",
+    "categories": [
+      "Confessor"
+    ],
+    "patronOf": [],
+    "memberOf": [],
+    "notableWorks": [],
+    "positions": [],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gary%20Cooper%20and%20Veronica%20Balfe%201933.jpg",
+    "summary": "American actress (1913-2000).",
+    "biography": "American actress (1913-2000)",
+    "pathToSainthood": null,
+    "miracles": [],
+    "martyrdom": null,
+    "symbols": [],
+    "quotes": [],
+    "_meta": {
+      "wikidataId": "Q7922400",
+      "wikipedia": "https://en.wikipedia.org/wiki/Veronica_Cooper",
+      "country": "United States"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Veronica Giuliani",
+    "birthYear": 1660,
+    "deathYear": 1727,
+    "feastDay": null,
+    "gender": "female",
+    "region": "Unknown",
+    "era": "Modern",
+    "categories": [
+      "Nun"
+    ],
+    "patronOf": [],
+    "memberOf": [],
+    "notableWorks": [],
+    "positions": [
+      "abbess"
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ver%C3%B3nica%20Giuliani.jpg",
+    "summary": "Capuchin mystic (1660-1727).",
+    "biography": "Capuchin mystic (1660-1727)",
+    "pathToSainthood": null,
+    "miracles": [],
+    "martyrdom": null,
+    "symbols": [],
+    "quotes": [],
+    "_meta": {
+      "wikidataId": "Q239160",
+      "wikipedia": "https://en.wikipedia.org/wiki/Veronica_Giuliani",
+      "country": null
+    }
+  },
+  {
+    "id": 6,
+    "name": "Veronica Lueken",
+    "birthYear": 1923,
+    "deathYear": 1995,
+    "feastDay": null,
+    "gender": "female",
+    "region": "Americas",
+    "era": "Contemporary",
+    "categories": [
+      "Confessor"
+    ],
+    "patronOf": [],
+    "memberOf": [],
+    "notableWorks": [],
+    "positions": [],
+    "image": null,
+    "summary": "American Marian visionary (1923–1995).",
+    "biography": "American Marian visionary (1923–1995)",
+    "pathToSainthood": null,
+    "miracles": [],
+    "martyrdom": null,
+    "symbols": [],
+    "quotes": [],
+    "_meta": {
+      "wikidataId": "Q3556036",
+      "wikipedia": "https://en.wikipedia.org/wiki/Veronica_Lueken",
+      "country": "United States"
+    }
+  }
+]
